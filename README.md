@@ -27,7 +27,7 @@ Mau coba jalanin atau modifikasi project ini? Gas ikuti langkah ini:
 
 1.  **Clone Repo ini**
     ```bash
-    git clone (https://github.com/DvRex/UAS-PEMODELAN_SIMULASI-BUS.git)
+    git clone https://github.com/DvRex/UAS-PEMODELAN_SIMULASI-BUS.git
     cd UAS-PEMODELAN_SIMULASI-BUS
     ```
 
@@ -35,21 +35,28 @@ Mau coba jalanin atau modifikasi project ini? Gas ikuti langkah ini:
     Pastikan Python sudah terinstall, lalu jalankan:
     ```bash
     pip install -r requirements.txt
+    atau jika error bisa coba gunakan
+    py -m pip install -r requirements.txt > Pastikan Step 1 Dan CD ke Folder sudah dilakukan
     ```
-
-3.  **Setup API Key (Opsional)**
-    Agar fitur AI berjalan otomatis:
+    
+3.  **Setup .streamlit**
+    Agar Streamlit bisa dijalankan silahkan
     * Buat folder baru bernama `.streamlit` di dalam folder project.
-    * Di dalamnya, buat file bernama `secrets.toml`.
+    * Di dalamnya, buat file bernama `secrets.toml`. > **Step selanjutnya bisa diskip jika ingin input API Manual atau Tidak menggunakan AI**
     * Isi file tersebut dengan:
         ```toml
         GROQ_API_KEY = "masukkan_api_key_groq_disini"
         ```
-    *(Kalau tidak di-setup, nanti bisa input manual lewat tampilan web) Untuk Mendapatan API Groq Bisa Melalui console.groq.com*
+    ***Pastikan File secrets.toml ada di dalam folder .streamlit walaupun kosong!!!** 
 
-4.  **Jalankan Aplikasi**
+    Jika Ingin Setiap Run streamlit localhost dan Fungsi AI Berfungsi Silahkan Isi API dari groq dengan contoh seperti di atas.      
+    Untuk Mendapatan API Groq Bisa Melalui console.groq.com
+
+5.  **Jalankan Aplikasi**
     ```bash
-    streamlit run app.py
+    streamlit run app.py 
+    atau
+    py -m streamlit run app.py
     ```
 
 ## 📂 Struktur File
