@@ -56,7 +56,7 @@ with st.sidebar:
     
     st.markdown("---")
     st.subheader("Parameter Operasional")
-    LAMBDA = st.slider("Rata-rata Kedatangan (λ orang/menit)", 0.5, 10.0, 2.0, 0.1)
+    LAMBDA = st.slider("Rata-rata Kedatangan (λ orang/menit)", 1.0, 10.0, 2.0, 1.0) # Parameter Min Max Value Step bisa di buat per satu atau per 0.10
     BUS_INTERVAL = st.number_input("Interval Kedatangan Bus (menit)", min_value=1, max_value=60, value=10)
     BUS_CAPACITY = st.slider("Kapasitas Bus (Kursi)", 10, 100, 25, 1)
     
@@ -272,7 +272,14 @@ if st.session_state.simulation_results:
         
         fig.update_layout(title="Dinamika Panjang Antrian (Confidence Interval 95%)", xaxis_title="Waktu Simulasi (Menit)", yaxis_title="Jumlah Penumpang", hovermode="x unified", height=500)
         st.plotly_chart(fig, use_container_width=True)
-
+        html_buffer = fig.to_html(full_html=True, include_plotlyjs='cdn')
+        st.download_button(
+        label="💾 Download Grafik Interaktif (HTML)",
+        data=html_buffer,
+        file_name="grafik_simulasi_antrian.html",
+        mime="text/html",
+        help="Download grafik ini agar bisa dibuka di browser secara offline dan tetap interaktif (bisa di-zoom)."
+    )
     with tab2:
         st.header("📋 Analisis Kinerja Sistem (Rule-Based)")
 
