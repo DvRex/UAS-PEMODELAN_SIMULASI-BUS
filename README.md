@@ -6,6 +6,15 @@ Halo! 👋 Repo ini berisi *source code* lengkap untuk aplikasi dashboard simula
 
 Yang bikin beda? Project ini udah diintegrasikan dengan **AI (Llama 3 via Groq)** untuk ngasih rekomendasi solusi teknis secara otomatis! 🤖✨
 
+---
+
+## 🌐 Live Demo
+Coba Simulasi langsung melalui browser tanpa perlu instalasi:
+
+### 👉 [Klik Disini untuk Membuka Website        (Streamlit)](https://simulasi-antrian-bus-monte-carlo.streamlit.app/)
+
+---
+
 ## 🚀 Fitur Unggulan
 1.  **Simulasi Monte Carlo:** Memprediksi ketidakpastian kedatangan penumpang (menggunakan Distribusi Poisson).
 2.  **Dashboard Interaktif:** User bisa atur parameter (Interval Bus, Kapasitas, Rata-rata Penumpang) secara *real-time*.
