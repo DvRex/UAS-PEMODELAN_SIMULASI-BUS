@@ -274,14 +274,14 @@ if st.session_state.simulation_results:
         st.plotly_chart(fig, use_container_width=True)
         html_buffer = fig.to_html(full_html=True, include_plotlyjs='cdn')
         st.download_button(
-        label="💾 Download Grafik Interaktif (HTML)",
+        label="💾 Download Grafik Interaktif (HTML)", # TOMBOL DOWNLOAD GRAFIK
         data=html_buffer,
         file_name="grafik_simulasi_antrian.html",
         mime="text/html",
         help="Download grafik ini agar bisa dibuka di browser secara offline dan tetap interaktif (bisa di-zoom)."
     )
     with tab2:
-        st.header("📋 Analisis Kinerja Sistem (Rule-Based)")
+        st.header("📋 Analisis Kinerja Sistem")
 
         # LOGIC VARIABLES
         is_wait_long = global_avg_wait > params['interval']
